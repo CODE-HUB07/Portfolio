@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <meta name="robots" content="index, follow">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+
+
+<!-- Description -->
+<meta name="description" content="Explore the portfolio of Siddhant, a Computer Science student and aspiring web developer. View projects, coding skills, and contact details for collaborations.">
+
+<!-- Keywords -->
+<meta name="keywords" content="Siddhant portfolio, web developer, computer science student, HTML, CSS, JavaScript, Python, SATI Polytechnic, CS projects, programmer portfolio">
+
+<!-- Author -->
+<meta name="author" content="Siddhant">
+
+<meta property="og:title" content="Siddhant | Web Developer & CS Student Portfolio">
+<meta property="og:description" content="Check out Siddhant's personal portfolio featuring top web projects and coding skills.">
+<meta property="og:url" content="https://siddhant-sharma.netlify.app/">
+<meta property="og:type" content="website">
+
+
+<meta name="twitter:title" content="Siddhant | Web Developer & CS Student Portfolio">
+<meta name="twitter:description" content="Explore Siddhant's portfolio, a Computer Science enthusiast showcasing creative projects and skills.">
+
+    <title>Siddhant Sharma - Portfolio</title>
+    <link rel="stylesheet" href="../style/index.css" />
+    <link rel="stylesheet" href="../style/sec_div.css" />
+    <link rel="stylesheet" href="../style/contact.css" />
+    <link rel="stylesheet" href="../style/projects.css" />
+    <link rel="stylesheet" href="../style/certificate.css" />
+    <!-- <script src="../scripts/Device Restrictioin.js"></script> -->
+  </head>
+  <body>
+    <style>
+      @keyframes top {
+        0% {
+        }
+        25% {
+          top: 68%;
+        }
+        50% {
+          top: 70%;
+        }
+        75% {
+          top: 68%;
+        }
+        100% {
+          top: 70%;
+        }
+      }
+
+      .cursor {
+        position: fixed;
+        transition: all ease 0;
+        height: 0px;
+        width: 0px;
+        border-radius: 50%;
+        z-index: 999;
+        box-shadow: 0 0 80px 20px rgb(0, 199, 234);
+        background-color: aqua;
+      }
+      ::-webkit-scrollbar {
+        background: rgba(255, 255, 255, 0.066);
+        width: 8px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: rgba(0, 255, 255, 0.073);
+        border-radius: 20px;
+        transition: all ease 0.5s;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: rgba(0, 255, 255, 0.724);
+      }
+      ::-webkit-scrollbar-thumb:active {
+        background: red;
+      }
+      .artworld {
+        border: 5px solid white;
+        opacity: 70%;
+        cursor: pointer;
+        left: -1%;
+        position: fixed;
+        z-index: 555;
+        top: 10%;
+        font-weight: 800;
+        transform: scale(0.5);
+        background: rgba(2, 182, 182, 0.226);
+        padding: 1%;
+        text-transform: uppercase;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        height: 170px;
+        width: max-content;
+        transition: all ease-in-out 0.2s;
+      }
+      .artworld:hover {
+        transform: scale(0.6);
+        opacity: 100%;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <div class="body">
+      <div class="artworld">
+        <span
+          ><span class="a">A</span> <br /><span class="r">R</span> <br /><span
+            class="t"
+            >T</span
+          >
+          <br />
+          <br />
+          <span class="w">W</span> <br /><span class="o">O</span> <br /><span
+            class="rr"
+            >R</span
+          >
+          <br /><span class="l">L</span> <br /><span class="d">D</span></span
+        >
+      </div>
+      <div class="cursor"></div>
+      <nav>
+        <span class="first_name"
+          >Siddhant <span class="last_name">Sharma</span></span
+        >
+        <span class="side-nav" onclick="side_nav()">+</span>
+        <ul>
+          <li class="home" onmouseenter="home()" onmouseleave="home_out()">
+            Home
+          </li>
+          <li
+            class="about"
+            onmouseenter="about()"
+            onmouseleave="about_out()"
+            onclick="scrollToSection('about')"
+          >
+            About
+          </li>
+
+          <li
+            class="project"
+            onmouseenter="project()"
+            onmouseleave="project_out()"
+            onclick="Projects()"
+          >
+            Projects
+          </li>
+          <li
+            onclick="Contact()"
+            onmouseleave="contact_out()"
+            onmouseenter="contact()"
+            class="contact"
+          >
+            Contact
+          </li>
+          <li class="close-side-nav" onclick="close_nav()">← Back</li>
+        </ul>
+      </nav>
+      <div class="lower-body">
+        <div id="first_div" id="home-page">
+          <div class="cont">
+            <h2>It's <span>Siddhant</span></h2>
+            <span>I'm a <span class="auto-type"></span></span>
+            <p>
+              Code is my language, design is my expression, and the web is my
+              world.
+            </p>
+            <div class="icons">
+              <a
+                href="https://github.com/CODE-HUB07/"
+                class="giticon"
+                onmouseenter="gith()"
+                onmouseleave="githout()"
+                ><img src="../img/white-github.png" alt=""
+              /></a>
+              <a
+                href="https://www.instagram.com/siddhant_sharma___/#"
+                class="insta"
+                onmouseenter="insta()"
+                onmouseleave="instaout()"
+                ><img src="../img/white-insta.png" alt="" height="22px"
+              /></a>
+              <a href="#" class="what" onmouseenter="what()"
+                ><img src="../img/white-whatshapp.png" alt=""
+              /></a>
+            </div>
+          </div>
+        </div>
+        <div class="sec_div_combo" >
+          <div class="sec_div_1" >
+            <div class="img_bio">
+              <img src="../img/442.jpg" alt="" height="150px" />
+              <div class="bio">
+                <span class="s1"
+                  >Name: &ThickSpace;&ThickSpace; Siddhant Sharma</span
+                >
+                <br />
+                <span class="s2"
+                  >Address:&ThickSpace;&ThickSpace; Vidisha, Madhya Pradesh
+                </span>
+                <br />
+                <span class="s3"
+                  >Role: &ThickSpace;&ThickSpace; Frontend Web Developer
+                </span>
+              </div>
+            </div>
+            <div class="skills">
+              <strong>Skills</strong><br />
+              <div class="cont-skill">
+                <span>Python</span>
+                <hr class="python" title="65%" />
+                <span>C</span>
+                <hr class="c_lang" title="40%" />
+                <span>Java Script</span>
+                <hr class="js" title="78%" />
+                <span>HTML</span>
+                <hr title="90%" />
+                <span>CSS</span>
+                <hr title="90%" />
+                <span>MySQL</span>
+                <hr title="29%" class="sql" />
+              </div>
+            </div>
+            <div class="certificate" onclick="open_certi()">
+              <span>CERTIFICATES</span>
+            </div>
+            <div class="parent-certi">
+              <div class="win-certi">
+                <div>Certificates</div>
+                <span onclick="closecerti()">X</span>
+                <img
+                  src="../img/TATA Certificate of Data Visualization.png"
+                  alt="TATA Certificate of Data Visualization"
+                /><img
+                  src="../img/Scalar Certificate of Java Script.png"
+                  alt="Scalar Certificate of Java Script"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="sec_div">
+            <h3>About Me -</h3>
+            <p>
+              Passionate beginner developer eager to learn and grow in the world
+              of technology. Dedicated to crafting clean, efficent code and
+              solving complex problems. Enthusiastic about collaborating with
+              others and embarcing new challengs.
+            </p>
+            <div class="profile">
+              <div class="hover"></div>
+              <h2>profile:</h2>
+              <span>Frontend Web Developer & Freelancer Artist</span>
+            </div>
+            <div class="domain">
+              <div class="hover"></div>
+              <h2>Domain:</h2>
+              <span>Web Developement</span>
+            </div>
+            <div class="education">
+              <div class="hover"></div>
+              <h2>Education:</h2>
+              <span>PolyTechnique Diploma in Computer Science</span>
+            </div>
+            <div class="lang">
+              <div class="hover"></div>
+              <h2>Languages:</h2>
+              <span>Hindi & English</span>
+            </div>
+            <div class="skill">
+              <div class="hover"></div>
+              <h2>Other Skills:</h2>
+              <span
+                >Drawing proficiency, Observational Skills,Creativity,Knowledge
+                of Art Fundamentals,Adaptability & Attention to Detail.
+              </span>
+            </div>
+            <div class="interest">
+              <div class="hover"></div>
+              <h2>Interest:</h2>
+              <span>Drawing(Sketching),Editing & Reading</span>
+            </div>
+          </div>
+        </div>
+        <div class="third_div" id="project-page">
+          <div class="div1in3">
+            <h1>Projects</h1>
+            <p>All Projects is Host by me on Netlify</p>
+          </div>
+
+          <div class="div2in3">
+            <table>
+              <tr>
+                <th>Project Name</th>
+                <th>Used Language</th>
+                <th>Project Discription</th>
+                <th>Link</th>
+              </tr>
+              <tr>
+                <td>ME/D Message Encrypter & Decoder</td>
+                <td>Java Script , HTML , CSS</td>
+                <td>NOT responsive. only for laptop's & PC's</td>
+                <td><a href="https://med-tool.netlify.app/">- LINK -</a></td>
+              </tr>
+              <tr>
+                <td>Data Entry Form</td>
+                <td>Java Script , HTML , CSS</td>
+                <td>It is responsive. You Can Access it where you want.</td>
+                <td>
+                  <a href="https://sdtc-project.netlify.app/">- LINK -</a>
+                </td>
+              </tr>
+              <tr>
+                <td>Netflix Clone Sign-in Page</td>
+                <td>HTML , CSS</td>
+                <td>NOT responsive. only for Mobile</td>
+                <td><a href="https://sidflix.netlify.app/">- LINK -</a></td>
+              </tr>
+              <tr>
+                <td>HTML Shape Creater</td>
+                <td>Java Script , HTML , CSS</td>
+                <td>NOT responsive. only for laptop's & PC's</td>
+                <td><a href="https://htmlsc.netlify.app/">- LINK -</a></td>
+              </tr>
+              <tr>
+                <td>Number Bubble Game</td>
+                <td>Java Script , HTML , CSS</td>
+                <td>NOT responsive. only for laptop's & PC's</td>
+                <td><a href="https://tp-game.netlify.app/">- LINK -</a></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="fourth_div" id="contact-page">
+          <div>Contact</div>
+          <div class="logos">
+            <a href="https://www.instagram.com/siddhant_sharma___/#"
+              ><img src="../img/white-insta.png" alt=""
+            /></a>
+            <a href=""><img src="../img/white-whatshapp.png" alt="" /></a>
+            <a href="https://github.com/CODE-HUB07/"
+              ><img src="../img/white-github.png" alt=""
+            /></a>
+          </div>
+          <div class="form">
+            <form id="feedform">
+              <label for="name">Name</label><br />
+              <input type="text" id="name" name="name" required /><br />
+              <label for="email" >E-mail</label><br />
+              <input type="email" name="email" id="email" required /><br />
+              <style>
+                .EmailVerify span{
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: rgb(247, 66, 66);
+
+                  }
+                  .EmailVerify{
+                    display: none;
+                    position: relative;
+                    left: 5px;
+                    top: 10px;
+                    font-weight: 400;
+                    color: white;
+                    font-size: 14px;
+                  }
+              </style>
+              <span class="EmailVerify"></span>
+              <label for="msg" class="message-label">Message</label><br />
+              <textarea
+                name="msg"
+                id="message"
+                rows="8"
+                cols="30"
+                placeholder="Hey I am ____ and i am very glad after Visiting your Portfolio. This is really Awesome !"
+              ></textarea
+              ><br />
+              <input type="submit" value="Send" id="btn-email" />
+            </form>
+            <script src="../scripts/Email-send.js"></script>
+          </div>
+          <div class="alert">
+            <div>
+              <span class="send">Thank you For Your Interest </span><br />
+              <span class="wrong"
+                >There may be some Technical issue your Message is not send to
+                the Siddhant <br />
+                Please Try Again !</span
+              >
+              <span class="missing-values">Please Fill out All these field</span>
+              <span class="wrong-2">Or you can try it manually </span>
+              <span class="wrong-3">sidsharma9752@gmail.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed(".auto-type", {
+        strings: ["Programmer", "Designer", "Web Developer"],
+        typeSpeed: 150,
+        backSpeed: 50,
+        backdelay: 500,
+        loop: true,
+      });
+
+      document.querySelector(".artworld").addEventListener("click", () => {
+        setTimeout(() => {
+          window.location.href = "ArtSection.html";
+        }, 50);
+      });
+
+      var btn = document.querySelector('#btn-email')
+btn.addEventListener('click',()=>{
+  btn.style.backgroundColor= ' rgba(89, 255, 89, 0.625)'
+  
+  setTimeout(()=>{
+    document.getElementById("name").value = '' ;
+    document.getElementById("email").value = '' ;
+    document.getElementById("message").value = '' ;
+
+  },500) 
+
+  setTimeout(()=>{
+    btn.style.backgroundColor= ''
+  },200)
+})
+    </script>
+    <script src="../scripts/script.js" ></script>
+    <script src="../scripts/EmailVerify.js"></script>
+    <script src="../scripts/Email-send.js"></script>
+    <script src="../scripts/Device Restrictioin.js"></script>
+  </body>
+</html>

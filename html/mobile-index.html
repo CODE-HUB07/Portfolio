@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+     <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <meta name="robots" content="index, follow">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+
+
+<!-- Description -->
+<meta name="description" content="Explore the portfolio of Siddhant, a Computer Science student and aspiring web developer. View projects, coding skills, and contact details for collaborations.">
+
+<!-- Keywords -->
+<meta name="keywords" content="Siddhant portfolio, web developer, computer science student, HTML, CSS, JavaScript, Python, SATI Polytechnic, CS projects, programmer portfolio">
+
+<!-- Author -->
+<meta name="author" content="Siddhant">
+
+<meta property="og:title" content="Siddhant | Web Developer & CS Student Portfolio">
+<meta property="og:description" content="Check out Siddhant's personal portfolio featuring top web projects and coding skills.">
+<meta property="og:url" content="https://siddhant-sharma.netlify.app/">
+<meta property="og:type" content="website">
+
+
+<meta name="twitter:title" content="Siddhant | Web Developer & CS Student Portfolio">
+<meta name="twitter:description" content="Explore Siddhant's portfolio, a Computer Science enthusiast showcasing creative projects and skills.">
+
+    <title>Siddhant's Portfolio</title>
+    <link rel="stylesheet" href="../style/contact.css">
+    <link rel="stylesheet" href="../style/mobile.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+    <style>
+    
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1><span>Siddhant's </span> Portfolio</h1>
+      <nav>
+        <a onclick="scrollToSection('about')">About</a>
+        <a onclick="scrollToSection('projects')">Projects</a>
+        <a onclick="scrollToSection('contact')">Contact</a>
+      </nav>
+    </header>
+
+    <div class="container">
+      <div class="old-1">
+        <div class="auto-type-cont">
+          <span>I'm a &MediumSpace;<span class="auto-type"></span></span>
+          <p>
+            Code is my language, design is my expression, and the web is my
+            world.
+          </p>
+        </div>
+      </div>
+
+      <div class="inner-cont">
+        <section id="about">
+          <h2>About Me</h2>
+          <div class="img-bio-cont">
+            <img
+              src="../img/442.jpg"
+              alt=""
+              height="100px"
+              
+              style="border-radius: 10%"
+            />
+            <div class="bio">
+              <span class="s1"
+                >Name: &ThickSpace;&ThickSpace; Siddhant Sharma</span
+              >
+              <br />
+              <span class="s2"
+                >Address:&ThickSpace;&ThickSpace; Vidisha, Madhya Pradesh
+              </span>
+              <br />
+              <span class="s3"
+                >Role: &ThickSpace;&ThickSpace; Frontend Web Developer
+              </span>
+            </div>
+          </div>
+          <div class="skills">
+            <strong>Skills</strong><br />
+            <div class="cont-skill">
+            
+            
+               <span><img src="../img/sketches/logos/d641fc16ea20dc61041c35cc4007259b.png" height="40px" alt="Python"></span>
+              
+              <span><img src="../img/sketches/logos/27269a3c57a20a4f4e483f263f876fd0.png" height="80px" alt="JavaScript"></span>
+               
+              <span><img src="../img/sketches/logos/kisspng-mysql-logo-database-portable-network-graphics-imag-mysql-logo-www-pixshark-com-images-galleries-wit-5b739992b3aac8.4906831015343026107359.png" height="60px" alt="SQL"></span>
+              
+              <span><img src="../img/sketches/logos/cac19703906e76b45b405ce2b42e4411.png" height="60px" alt="HTML & CSS"></span>
+            
+            </div>
+          </div>
+          <p>
+            Hi, I'm Siddhant! I'm a front-end developer with a passion for creating sleek, user-friendly websites and applications. My expertise lies in HTML, CSS, JavaScript, and Node.js. I enjoy tackling challenges, constantly improving my skills, and I'm also a skilled sketch artist. I channel my creativity into producing detailed and expressive artwork, experimenting with different styles and techniques to refine my craft. Sketching allows me to bring ideas to life visually and adds a unique dimension to my creativity.
+          </p>
+        </section>
+
+        <section id="projects">
+          <h2>Projects</h2>
+          <div class="projects">
+            <div class="project">
+              <h3>Netflix Clone</h3>
+              <p>
+                A clone of Netflix with a smooth user interface built
+                using HTML, CSS, and JavaScript. <br>
+                Project link - <a href="https://sidflix.netlify.app/">SidFlix</a>
+              </p>
+            </div>
+            <div class="project">
+                <h3>ME/D (Message Encryption & Decryption)</h3>
+                <p>
+                    ME/D is a secure and intuitive tool designed to encrypt and decrypt messages effortlessly. As the name suggests, it ensures the confidentiality and integrity of sensitive information by applying encryption techniques. The tool is perfect for safeguarding communication, providing users with both functionality and peace of mind. Let me know if you'd like to expand or customize this! <br>
+                    Project Link - <a href="https://med-tool.netlify.app/">ME/D</a>
+                </p>
+            </div>
+            <div class="project">
+              <h3>Portable Data Entry</h3>
+              <p>
+                Portable Data Entry is a simple tool that helps users create Excel or PDF files from their input. It’s straightforward, easy to use, and perfect for quick data organization tasks. <br>
+                Project link is not available !
+              </p>
+            </div>
+            <!-- Add more projects as needed -->
+          </div>
+        </section>
+
+        <section id="contact">
+          <h2>Contact Me</h2>
+          <p class="contact-p">
+            Feel free to reach out to me for collaborations, freelance work, or
+            just to say hi!
+          </p>
+          <div class="fourth_div">
+       
+            <div class="logos">
+              <a href="https://www.instagram.com/siddhant_sharma___/#"
+                ><img src="../img/white-insta.png" alt=""
+              /></a>
+              <a href=""><img src="../img/white-whatshapp.png" alt="" /></a>
+              <a href="https://github.com/CODE-HUB07/"
+                ><img src="../img/white-github.png" alt=""
+              /></a>
+            </div>
+            <div class="form">
+              <form id="feedform">
+                <label for="name">Name</label><br />
+                <input type="text" id="name" name="name" required /><br />
+                <label for="email">E-mail</label><br />
+                <input type="email" name="email" id="email" required /><br />
+                <style>
+                  .EmailVerify span{
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: rgb(247, 66, 66);
+
+                  }
+                  .EmailVerify{
+                    display: none;
+                    position: relative;
+                    left: 5px;
+                    top: 10px;
+                    font-weight: 400;
+                    color: white;
+                    font-size: 14px;
+                  }
+                </style>
+                <span class="EmailVerify"> <span>Alert : </span>Email is not Valid or maybe incorrect</span><br>
+                <label for="msg" class="message-label">Message</label><br />
+                <textarea
+                  name="msg"
+                  id="message"
+                  rows="8"
+                  cols="30"
+                  placeholder="Hey I am ____ and i am very glad after Visiting your Portfolio. This is really Awesome !"
+                ></textarea
+                ><br />
+                <input type="submit" value="Send" id="btn-email" />
+              </form>
+            
+            </div>
+            <div class="alert">
+              <div>
+                <span class="send">Thank you For Your Interest </span><br />
+                <span class="wrong"
+                  >There may be some Technical issue your Message is not send to
+                  the Siddhant <br />
+                  Please Try Again !</span
+                >
+               
+                <span class="missing-values">Please Fill out All these field</span>
+                <span class="wrong-2">Or you can try it manually </span>
+              </div>
+            </div>
+          </div>
+          <div class="manual-contact">
+          <p>Email: sidsharma9752@gmail.com</p>
+          <p>Phone: +91 9752653765</p>
+        </div>
+        </section>
+      </div>
+    </div>
+
+    <footer>
+      <p>
+        &copy; 2025 Siddhant. Built with 💙 and passion.
+       
+      </p>
+    </footer>
+  </body>
+  <script src="../scripts/script-for-mobile.js"></script>
+  <script src="../scripts/EmailVerify.js"></script>
+  
+  <script src="../scripts/Email-send.js"></script>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script>
+    var typed = new Typed(".auto-type", {
+      strings: ["Programmer", "Designer", "Web Developer"],
+      typeSpeed: 150,
+      backSpeed: 50,
+      backdelay: 500,
+      loop: true,
+    });
+    function checkDevice() {
+    if (window.innerWidth > 1304) {  // You can adjust the width threshold as needed
+        window.location.href = 'desktop-index.html'
+    }
+}
+window.onresize = checkDevice;  
+window.onload = checkDevice;  
+
+var btn = document.querySelector('#btn-email')
+btn.addEventListener('click',()=>{
+  btn.style.backgroundColor= ' rgba(89, 255, 89, 0.625)'
+  
+  setTimeout(()=>{
+    document.getElementById("name").value = '' 
+    document.getElementById("email").value = '' 
+    document.getElementById("message").value = ''
+
+  },500) 
+
+  setTimeout(()=>{
+    btn.style.backgroundColor= ''
+  },200)
+})
+
+  </script>
+</html>
