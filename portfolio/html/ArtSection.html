@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Art Section - Siddhant Portfolio</title>
+    <link rel="stylesheet" href="../style/artSection.css" />
+    <style>
+         ::-webkit-scrollbar{
+    background: rgba(255, 255, 255, 0.066); 
+    width: 8px;
+    
+      }
+      ::-webkit-scrollbar-thumb{
+        background: rgba(0, 255, 255, 0.073);
+        border-radius: 20px;
+        transition: all ease 0.5s;
+      }
+      ::-webkit-scrollbar-thumb:hover{
+        background: rgba(0, 255, 255, 0.724);
+      }
+      ::-webkit-scrollbar-thumb:active{
+        background: red;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <span class="first_name"
+        >Siddhant <span class="last_name">Sharma</span></span
+      >
+      <span class="side-nav" onclick="side_nav()">+</span>
+      <ul>
+        <li class="home" onmouseenter="home()" onmouseleave="home_out()" onclick="Home()">
+          Home
+        </li>
+
+      </ul>
+    </nav>
+    <div class="lowerBody">
+      <div class="greetCont">
+        <h2 class="welcome">
+          Welcome
+          <h3 class="greet">To Sid's Art World</h3>
+        </h2>
+        <hr />
+      </div>
+      <div class="padForSlider">
+        <div class="slider">
+          <div class="slides">
+            <div class="slide">
+              <img
+                style="filter: grayscale(100%); height: 520px; margin-top: 20px"
+                src="../img/sketches/SaveVid.Net_288575894_1044209073121305_4766058403769116578_n.jpg"
+                alt="Image 1"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="../img/sketches/SaveVid.Net_270718173_3064786793735490_4269388952733007254_n.jpg"
+                alt="Image 2"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="../img/sketches/SaveVid.Net_278610285_514579516783940_9077529787393416819_n.jpg"
+                alt="Image 3"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="../img/sketches/SaveVid.Net_279168450_718417482516933_1055140066802601265_n.jpg"
+                alt="Image 4"
+              />
+            </div>
+          </div>
+          <!-- Navigation Arrows -->
+          <button class="prev">&lt;</button>
+          <button class="next">&gt;</button>
+          <!-- Navigation Dots -->
+          <div class="dots"></div>
+        </div>
+        <div class="quote">
+            <div>
+            <p>Art is the only way to run away without leaving Home. </p>
+            <span>-Twyla Tharp</span>
+        </div>
+        </div>
+
+      </div>
+      <div class="artWorks">
+        <img
+          src="../img/sketches/SaveVid.Net_202154527_522636185593132_7656789176196429654_n.jpg"
+          alt=""
+        />
+        <img
+          src="../img/sketches/SaveVid.Net_209619009_840276633540299_3768691466027594543_n.jpg"
+          alt=""
+        />
+        <img
+          src="../img/sketches/SaveVid.Net_270718173_3064786793735490_4269388952733007254_n.jpg"
+          alt=""
+        />
+        <img
+          src="../img/sketches/SaveVid.Net_278610285_514579516783940_9077529787393416819_n.jpg"
+          alt=""
+        />
+        <img
+          src="../img/sketches/SaveVid.Net_288575894_1044209073121305_4766058403769116578_n.jpg"
+          alt=""
+        />
+        <img
+          src="../img/sketches/SaveVid.Net_279168450_718417482516933_1055140066802601265_n.jpg"
+          alt=""
+        />
+        <img
+          src="../img/sketches/SaveVid.Net_312174888_403640545294922_8313655449183909494_n.jpg"
+          alt=""
+        />
+        <img
+          src="../img/sketches/SaveVid.Net_419013544_419208903766478_6000229615519799730_n.jpg"
+          alt=""
+        />
+      </div>
+      
+      <footer>
+        <div>
+            <h3>See More ...</h3>
+        </div>
+        <div>
+            <p>For More Art Works You have to visit my Instagram Page</p>
+        </div>
+        <div>
+            <span>
+               <a href="https://www.instagram.com/siddhant_artz_/"> <img src="../img/white-insta.png" alt=""> siddhant_artz</a>
+            </span>
+        </div>
+      </footer>
+    </div>
+  </body>
+  <script src="../scripts/script.js"></script>
+  <script>
+    const slides = document.querySelectorAll(".slide");
+    const prevBtn = document.querySelector(".prev");
+    const nextBtn = document.querySelector(".next");
+    const dotsContainer = document.querySelector(".dots");
+    let currentIndex = 0;
+
+    // Create navigation dots
+    for (let i = 0; i < slides.length; i++) {
+      const dot = document.createElement("div");
+      dot.classList.add("dot");
+      dot.dataset.index = i;
+      if (i === 0) {
+        dot.classList.add("active");
+      }
+      dotsContainer.appendChild(dot);
+    }
+
+    // Update slide visibility and focus
+    const updateSlider = () => {
+      // Move slides to the right position
+      const slidesContainer = document.querySelector(".slides");
+      slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+      slides.forEach((slide, index) => {
+        slide.classList.remove("active");
+        if (index === currentIndex) {
+          slide.classList.add("active");
+        }
+      });
+
+      // Update navigation dots
+      document.querySelectorAll(".dot").forEach((dot, index) => {
+        dot.classList.toggle("active", index === currentIndex);
+      });
+    };
+
+    // Go to the next slide
+    const goToNext = () => {
+      currentIndex = (currentIndex + 1) % slides.length;
+      updateSlider();
+    };
+
+    // Go to the previous slide
+    const goToPrev = () => {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      updateSlider();
+    };
+
+    // Event listeners for buttons and dots
+    nextBtn.addEventListener("click", goToNext);
+    prevBtn.addEventListener("click", goToPrev);
+    dotsContainer.addEventListener("click", (e) => {
+      if (e.target.classList.contains("dot")) {
+        currentIndex = parseInt(e.target.dataset.index);
+        updateSlider();
+      }
+    });
+
+    // Auto-slide every 5 seconds
+    setInterval(goToNext, 5000);
+
+    // Initial call to set the active slide
+    updateSlider();
+  </script>
+</html>

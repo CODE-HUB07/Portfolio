@@ -1,0 +1,236 @@
+.img-bio-cont img{
+  transform: scale(1.2);
+}
+.alert div span{
+    margin-top: 15%;
+}
+#name{
+    transform: scale(0.9);
+    left: -3%;
+    position: relative;
+}
+#email{
+    transform: scale(0.9);
+    left: -3%;
+    position: relative;
+}
+#message{
+    transform: scale(0.9);
+    left: -3%;
+    position: relative;
+}
+#btn-email{
+    transform: scale(0.8);
+    position: relative;
+    top: -3%;
+    font-size: large;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+.manual-contact p  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 10px;
+    opacity: 0.8;
+}
+.contact-p{
+    text-align: center;
+
+}
+  /* Base Styles */
+  body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
+  }
+
+  header {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  }
+
+  header h1 {
+    font-size: 2rem;
+    margin: 0;
+  }
+
+  nav {
+    margin-top: 0.5rem;
+  }
+
+  nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+
+  nav a:hover {
+    color: #00bcd4;
+  }
+  .inner-cont {
+    background: transparent;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+
+  }
+  .container {
+    background: transparent;
+
+    max-width: 1200px;
+  }
+
+  section {
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #00bcd4;
+  }
+
+  p {
+    line-height: 1.6;
+  }
+
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+ .project a {
+  text-decoration: none;
+  color: #00bcd4;
+ }
+  .project {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+
+  .project h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.2rem;
+    color: #ffffff;
+  }
+
+  .project p {
+    font-size: 0.9rem;
+    margin: 0.5rem 0 0;
+  }
+
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    font-size: 0.9rem;
+  }
+
+  footer a {
+    color: #00bcd4;
+    text-decoration: none;
+  }
+
+  footer a:hover {
+    text-decoration: underline;
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 1.5rem;
+    }
+
+    nav a {
+      font-size: 0.9rem;
+      margin: 0 0.5rem;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+    }
+  }
+  .auto-type {
+    color: #00bcd4;
+  }
+  .old-1 {
+    margin: 0;
+    background: url(../img/2-pexels-mag-photography-1501456-30327285.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 700px;
+    /* margin-top: -10%; */
+  }
+  .old-1 span {
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .old-1 p {
+    text-align: center;
+  }
+  .auto-type-cont {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .img-bio-cont {
+    margin-bottom: 5%;
+    background: #000000;
+    padding: 2%;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .bio {
+    
+    padding: 2%;
+    margin-left: 40px;
+    line-height: 30px;
+    opacity: 0.9;
+    margin-bottom: 2%;
+  }
+  .cont-skill{
+    /* transform: scale(0.8); */
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: rgba(3, 51, 105, 0.403);
+    border: white solid 1px;
+  }
+  .skills strong{
+    position: relative;
+    font-size: larger;
+    
+  }
+  .cont-skill span{
+    transition: all ease 0.3s;
+  }
+  .cont-skill span:hover{
+    transform: scale(1.2);
+  }
+  header h1 span{
+    color: #00bcd4;
+  }
