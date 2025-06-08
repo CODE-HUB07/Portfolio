@@ -38,6 +38,22 @@
   </head>
   <body>
     <style>
+    
+              .certi-cont{
+                 overflow-y: scroll;
+      column-count: 2; /* You can change this to 2 or 3 for responsiveness */
+      column-gap: 16px;
+      padding: 16px;
+
+              }
+              .items{
+               margin-bottom: 16px;
+      display: inline-block;
+      width: 100%; /* Important for column layout */
+      padding: 12px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+              }
       @keyframes top {
         0% {
         }
@@ -235,17 +251,30 @@
               <div class="win-certi">
                 <div>Certificates</div>
                 <span onclick="closecerti()">X</span>
+                <div class="certi-cont">
                 <img
                   src="../img/TATA Certificate of Data Visualization.png"
                   alt="TATA Certificate of Data Visualization"
+                  class="items"
                 /><img
                   src="../img/Scalar Certificate of Java Script.png"
                   alt="Scalar Certificate of Java Script"
+                    class="items"
                 />
                 <img
                   src="../img/ElementOfAI.jpg"
-                  alt="Scalar Certificate of Java Script"
+                  alt="Element Of AI Certificattion"
+                  class="items"
                 />
+                  <img 
+                    src="../img/Pre-Hackathon.png"
+                    class="items"
+                    />
+                  <img 
+                    src="../img/Hackazards.jpg"
+                    class="items"
+                    />
+                  </div>
               </div>
             </div>
           </div>
